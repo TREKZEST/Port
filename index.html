@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Kumar Singh | Software Developer</title>
+
+<style>
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --accent:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family:Segoe UI,Roboto,sans-serif;
+}
+body{
+  background:linear-gradient(135deg,#020617,#020617);
+  color:var(--text);
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  background:rgba(2,6,23,.9);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+}
+.logo{
+  font-weight:700;
+  letter-spacing:1px;
+  color:var(--accent);
+}
+nav ul{
+  display:flex;
+  gap:20px;
+}
+nav ul li{list-style:none}
+nav ul li a{
+  color:var(--muted);
+  font-size:.9rem;
+  transition:.3s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color:var(--accent);
+}
+
+/* LAYOUT */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:100px 20px 20px;
+}
+section{margin-top:90px}
+h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  border-left:4px solid var(--accent);
+  padding-left:12px;
+}
+
+/* HERO */
+.hero{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+}
+.hero h1{
+  font-size:3rem;
+  line-height:1.2;
+}
+.hero span{color:var(--accent)}
+.hero p{
+  margin:20px 0;
+  color:var(--muted);
+  max-width:600px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  border:2px solid var(--accent);
+  border-radius:40px;
+  color:var(--accent);
+  margin-right:12px;
+  transition:.3s;
+}
+.btn:hover{
+  background:var(--accent);
+  color:#020617;
+  transform:translateY(-3px) scale(1.05);
+}
+.btn:active{transform:scale(.95)}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:18px;
+  transition:.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.5);
+}
+.card h3{
+  margin-bottom:8px;
+  color:var(--accent);
+}
+.card p{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  margin:90px 0 30px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .hero h1{font-size:2.2rem}
+  nav ul{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Saurabh Kumar Singh</div>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#Objective">Objective</a></li>
+      <li><a href="#Extracurricular Activities">Extracurricular Activities</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>Saurabh Kumar Singh</span></h1>
+    <h1>Software Developer</h1>
+    <p>
+      Full-stack developer skilled in JavaScript, Python, Node.js and React.
+      Solved 150+ LeetCode problems and built real-world scalable applications.
+    </p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="mailto:sawrrabh@gmail.com" class="btn">Hire Me</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    Diploma Computer Science student at DPG Degree College, Gurugram.
+    Freelance developer experienced with REST APIs, Firebase, SQL/NoSQL
+    databases and production-ready web apps.
+  </div>
+</section>
+
+<!--Objective-->
+<section id="Objective">
+  <h2>Objective<h2>
+  <div class="card">
+    Aspiring Software Engineer with a strong foundation in computer science
+    and hands-on experience in software development through academic projects and internships.
+    Eager to apply my programming skills and problem-solving abilities to contribute to 
+    innovative software solutions. Motivated to learn and grow within a dynamic tech environment. 
+  </div>
+</section>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Languages</h3><p>Java, Python, C, JavaScript</p></div>
+    <div class="card"><h3>Frontend</h3><p>HTML, CSS, Bootstrap, React</p></div>
+    <div class="card"><h3>Backend</h3><p>Node.js, Express, Firebase</p></div>
+    <div class="card"><h3>Databases & Tools</h3><p>MongoDB, MySQL, Git, Docker</p></div>
+    <div class="card"><h3>Tools & IDEs</h3><p>Git, Docker, Visual Studio Code, Eclipse </p></div>
+    <div class="card"><h3>Operating Systems</h3><p>Windows</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>File Transfer App</h3>
+      <p>Secure Firebase-based file sharing with progress tracking.</p>
+    </div>
+    <div class="card">
+      <h3>To-Do Manager</h3>
+      <p>Full-stack CRUD app using React, Node.js & MongoDB.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal brand site using pure HTML, CSS & JS.</p>
+    </div>
+    <div class="card">
+      <h3>Serverless Web Application</h3>
+      <p>Full-stack CRUD app using React, Node.js & MongoDB.</p>
+    </div>
+        <div class="card">
+      <h3>Vulnerability Scanner</h3>
+      <p>Full-stack CRUD app using React, Node.js & MongoDB.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Extracurricular Activities -->
+<section id="Extracurricular Activities">
+  <h2>Extracurricular Activities</h2>
+  <div class="card">
+* Solved 150+ coding challenges on LeetCode<br>
+* Earned 15+ professional certifications<br>
+* Completed 5+ job simulations and virtual experience programs<br>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    📍 Gurugram, Haryana<br>
+    📧 sawrrabh@gmail.com<br>
+    🔗 GitHub: github.com/trekzest<br>
+    🔗 LinkedIn: linkedin.com/in/trekzest
+  </div>
+</section>
+
+<footer>
+© 2025 Sawrrabh Syngh
+</footer>
+
+</div>
+
+<script>
+/* Scroll animation */
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:.2});
+cards.forEach(card=>observer.observe(card));
+
+/* Active nav */
+const links=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let fromTop=window.scrollY+120;
+  links.forEach(link=>{
+    let section=document.querySelector(link.getAttribute('href'));
+    if(section && section.offsetTop<=fromTop && section.offsetTop+section.offsetHeight>fromTop){
+      links.forEach(l=>l.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
